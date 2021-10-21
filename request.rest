@@ -1,0 +1,47 @@
+GET http://anicorp.tk:19200/api
+Content-Type: application/json
+
+####### Register
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    "name": "PhamHai",
+    "username": "phamhai",
+    "password": "abcabc",
+    "email": null
+}
+
+################################ Login
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "username": "phamconghai",
+    "password": "abcabc"
+}
+
+######## post Create new course
+GET http://localhost:8000/posts
+Content-Type: application/json
+
+######## post Create new course
+POST http://localhost:8000/posts/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTZkMjYyZGE3YmYwMjI4N2Y2NzdhMGIiLCJuYW1lIjoiUGhhbSBDb25nIEhhaSIsInVzZXJuYW1lIjoicGhhbWNvbmdoYWkiLCJhdmF0YXIiOiJodHRwczovL21lZGlhLmlzdG9ja3Bob3RvLmNvbS9waG90b3MvYnVzaW5lc3NtYW4tc2lsaG91ZXR0ZS1hcy1hdmF0YXItb3ItZGVmYXVsdC1wcm9maWxlLXBpY3R1cmUtcGljdHVyZS1pZDQ3NjA4NTE5OD9rPTIwJm09NDc2MDg1MTk4JnM9NjEyeDYxMiZ3PTAmaD04SjNWZ09aYWJfT2lZb0l1WmZpTUl2dWNGWUI4dldZbEtuU2pLdUtlWVFNPSJ9.TOFFVaEN-K0HfM2Wg9uMLv5yBHgRyRmUyxF8oerxQng
+
+{
+    "user": {
+        "name": "Hai Pham"
+    },
+    "content": {
+        "value": "Hello",
+        "image": "",
+        "time":""    
+    }
+}
+
+#####
+GET http://localhost:8000/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTZkMjYyZGE3YmYwMjI4N2Y2NzdhMGIiLCJuYW1lIjoiUGhhbSBDb25nIEhhaSIsInVzZXJuYW1lIjoicGhhbWNvbmdoYWkiLCJhdmF0YXIiOiJodHRwczovL21lZGlhLmlzdG9ja3Bob3RvLmNvbS9waG90b3MvYnVzaW5lc3NtYW4tc2lsaG91ZXR0ZS1hcy1hdmF0YXItb3ItZGVmYXVsdC1wcm9maWxlLXBpY3R1cmUtcGljdHVyZS1pZDQ3NjA4NTE5OD9rPTIwJm09NDc2MDg1MTk4JnM9NjEyeDYxMiZ3PTAmaD04SjNWZ09aYWJfT2lZb0l1WmZpTUl2dWNGWUI4dldZbEtuU2pLdUtlWVFNPSJ9.TOFFVaEN-K0HfM2Wg9uMLv5yBHgRyRmUyxF8oerxQng
